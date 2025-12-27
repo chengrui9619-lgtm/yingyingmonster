@@ -1,0 +1,28 @@
+/* 设置整个页面的背景和布局 */
+body, html {
+    height: 100%;
+    margin: 0;
+    /* 使用 Flexbox 布局让内容水平和垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* 柔和的浅灰色背景 */
+    font-family: sans-serif;
+}
+
+/* 嘤嘤怪图片的样式 */
+#yingying-monster {
+    width: 200px; /* 你可以根据需要调整图片大小 */
+    height: auto;
+    cursor: pointer; /* 鼠标放上去时变成小手图标，提示可以点击 */
+    transition: transform 0.1s ease; /* 添加一个平滑的过渡动画 */
+    /* 为了防止图片被选中变蓝，添加以下属性 */
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* 当图片被“激活”（点击按住）时的样式 */
+#yingying-monster:active {
+    /* 缩小到原尺寸的 90%，模拟“被捏”的效果 */
+    transform: scale(0.9);
+}
